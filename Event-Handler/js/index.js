@@ -14,10 +14,10 @@ function checkPassword(){
     let password_val = elKataLaluan.value;
     if (password_val.length> 5){
         alert("password check...ok !");
-        else {
+    } else {
             alert ("password too short");
         }
-    }
+    
 }
 
 let elKataLaluan = document.getElementById("kataLaluan");
