@@ -12,7 +12,7 @@ elNamaPengguna.value = transformUppercase(elNamaPengguna.value);
 function checkPassword(){
     let elKataLaluan = document.getElemetById ("kataLaluan");
     let password_val = elKataLaluan.value;
-    if (password_val.length > 5) {
+    if (password_val.length>5) {
         alert("password check...ok !");
     } else {
             alert ("password too short");
