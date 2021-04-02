@@ -1,26 +1,37 @@
-function haversine(lat1, lon1, lat2, lon2) {
-	var R = 6371; // earth radius in KM
-	var dLat = (lat2-lat1).toRad();
-	var dLon = (lon2-lon1).toRad();
-	var lat1 = lat1.toRad();
-	var lat2 = lat2.toRad();
-
-	var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
-	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	var d = R * c; // Kilometers
-
-	return roundVal(d);
+function findNearest(lat,lon){
+    let  d1 = haversine(lat,lon,2.922561,101.650965); // De Pulze
+    let d2 = haversine(lat,lon,3.073065,101.607787); // Sunway Pyramid
+    let d3 = haversine(lat,lon,3.158761,101.714524);
+   return[d1,d2,d3];
 }
+let elLocate= document.getElementById("Locate");
+elLocate.addEventListener("click",function(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition( function(position){
+            let elLat =document.getElementById("lat");
+            let elLong = document.getElementById("long");
+            let elDePulze = document.getElementById("depulze");
+            let elSunway = document.getElementById("sunway");
+            let elKlcc = document.getElementById("klcc");
 
-// Converts numeric degrees to radians
-if (typeof Number.prototype.toRad == 'undefined') {
-  Number.prototype.toRad = function() {
-    return this * Math.PI / 180;
-  }
-}
+            let userLat = position.coords.latitude;
+            let  userLong = position.coords.longitude;
 
-function roundVal(val) {
-  var dec = 2;
-  var result = Math.round(val*Math.pow(10,dec))/Math.pow(10,dec);
-  return result;
+            let distance = findNearest (userLat, userLong);
+            elLat.innerHTML= "Your latitude"+ userLat;
+            elLong.innerHTML= "Your longitude"+ userLong;
+            elDePulze.innerHTML= " Distance to De Pulze, cyberjaya is "+ distances [0] + "km";
+            elSunway.innerHTML= " Distance to Sunway Pyramid, Subang Jaya is "+ distances [1] + "km";
+            elKlcc.innerHTML= " Distance to KLCC, Ampang is "+ distances [2] + "km";
+        
+
+
+
+        });
+
+    } else {
+        alert("Geolocation is not supported by this browser !")
+    }
+
+    
 }
