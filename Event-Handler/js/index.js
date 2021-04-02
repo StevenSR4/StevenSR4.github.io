@@ -4,9 +4,9 @@ function transformUppercase(_val){
 
 //event listener
 
-let elnamaPengguna= document.getElementById ("namaPengguna"); // select elemet
-elnamaPengguna.addEventListener("keyup",function(){
-elnamaPengguna.value = transformUppercase(elnamaPengguna.value);
+let elNamaPengguna= document.getElementById ("namaPengguna"); // select elemet
+elNamaPengguna.addEventListener("keyup",function(){
+elNamaPengguna.value = transformUppercase(elNamaPengguna.value);
 });
 
 function checkPassword(){
