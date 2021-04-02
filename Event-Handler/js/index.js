@@ -11,7 +11,7 @@ elnamaPengguna.value= transformUppercase(elnamaPengguna.value);
 
 function checkPassword(){
     let elkataLaluan = document.getElemetById ("kataLaluan");
-    let password_val = elkataLalauan.value;
+    let password_val = elkataLaluan.value;
     if (password_val.length>5){
         alert("password check...ok !");
         else {
@@ -21,4 +21,4 @@ function checkPassword(){
 }
 
 let elkataLaluan = document.getElementById("kataLaluan");
-elkataLalauan.onblur = checkPassword; 
+elkataLaluan.onblur = checkPassword; 
