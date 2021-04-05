@@ -1,4 +1,4 @@
- let elLoadUser = document.getElementById.apply("getrandomUserBtn");
+ let elLoadUser = document.getElementById("getRandomUserBtn");
  elLoadUser. addEventListener ("click", function(){
      LoadUser();
 
