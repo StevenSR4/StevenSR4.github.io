@@ -34,4 +34,4 @@ elLocate.addEventListener("click",function(){
     }
 
     
-}
+});
