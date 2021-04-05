@@ -13,7 +13,7 @@
          let fn = document.getElementById ("firstName");
          let ln = document.getElementById ("lastname");
          let phone = document.getElementById ("phone");
-         let img = document.getElementById ("userimg");
+         let img = document.getElementById ("userImg");
 
          fn.innerHTML= data.results[0].name.first;
          ln.innerHTML= data.results[0]. name.last;
