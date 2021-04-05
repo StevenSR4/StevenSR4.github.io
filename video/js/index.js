@@ -29,3 +29,8 @@ video.addEventListener("timeupdate", function(){
     seekBar.value = value;
 
 });
+
+let volumeControl = document.getElementById("volume");
+volumeControl.addEventListener("change", function(){
+    video.volume= volumeControl.value;
+});
