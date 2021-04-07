@@ -1,10 +1,10 @@
-let app = new vue({
+let app = new Vue({
     el: "#app",
     data: {
         message:"Hello Vue !"
     }
 }); 
-let app2 = new vue ({
+let app2 = new Vue ({
     el:"#app2",
     data: {
         message: "Loaded on "+ new Date().toLocaleDateString();
@@ -14,7 +14,7 @@ let app2 = new vue ({
 
 });
 
-let app3 =new vue({
+let app3 =new Vue({
     el: "#app3",
     data: {
 
@@ -22,7 +22,7 @@ let app3 =new vue({
     }
 });
 
-let app4=new vue({
+let app4=new Vue({
     el: "#app4",
     data: {
         theList: [
@@ -38,5 +38,17 @@ let app4=new vue({
 
             }
         ]
+    }
+});
+
+let app5= new Vue({
+    el: "#app5",
+    data: {
+        msg: "Steven Raj"
+    },
+    method: {
+        reverseMsg: function(){
+            this.msg = this.msg.split("").reverse().join("");
+        }
     }
 });
