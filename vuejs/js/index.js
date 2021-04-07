@@ -8,7 +8,7 @@ let app = new Vue({
 let app2 = new Vue ({
     el:"#app2",
     data: {
-        message: "Loaded on "+ new Date().toLocaleDateString();
+        message: "Loaded on "+ new Date().toLocaleDateString(),
        linkUrl: "https://bbc.in/2LanJs8"
        linkText: "Google is down!"
     }
@@ -71,15 +71,15 @@ let app7= new Vue ({
     data: {
         groceryList:[
             {
-                id=0, 
+                id:0, 
                 desc:"vegetables"
             },
             {
-                id=1, 
+                id:1, 
                 desc:"Cheese"
             },
             {
-                id=2, 
+                id:2, 
                 desc:"Mineral Water"
             }
         ]
