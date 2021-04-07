@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
+
     <div id= "app">
         {{message}}
     </div>
@@ -17,7 +18,7 @@
             hover your mouse over me for a few seconds to see the title !
         </span>
    <a v-bind:href="linkUrl" target="_blank" rel="noopener noreferrer">
-    {{linkText}}
+            {{linkText}}
    </a>
    </div>
 
@@ -25,14 +26,15 @@
        <span v-if = "showIt">Now you see this</span>
 
    </div>
+
 <div id ="app4">
     <ol>
         <li v-for="todo in theList">
             {{todo.text}}
-
         </li>
     </ol>
 </div>
+
 <div id="app5">
     <P>
         {{msg}}
@@ -44,7 +46,7 @@
 <div id="app6">
 <p>{{message}}</p>
 
-<input type="text" v-modal=message>
+<input type="text" v-model="message">
 </div>
   
     <script src="js/index.js"></script>
