@@ -40,4 +40,4 @@ function BookNow (userName, userEmail, userPax,userRemarks){
     });
 
 
-}
+}  
