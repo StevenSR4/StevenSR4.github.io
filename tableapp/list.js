@@ -12,7 +12,9 @@ fetch(url)
     let bookingNameList=document.getElementById("bookingNameList");
 
     // clear the table rows
-    for (let k= bookingNameList.rows.length -1; k>0; )
+    for (let k= bookingNameList.rows.length -1; k>0;k--){
+        bookingNameList.deleteRows(k);
+    }
 
     for(let i =0; i<json.bookingItems.length; i++){
         let gName =json.bookingItems[i].name;
