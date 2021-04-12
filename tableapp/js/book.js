@@ -19,7 +19,7 @@ function BookNow (userName, userEmail, userPax,userRemarks){
 
     let url = 'https://api.sheety.co/9192796fbfeb32fc266d9e164e704c37/tableapp/bookingItem';
     let body = {
-      bookingItem: {
+      bookingitem: {
         name: userName,
         email: userEmail,
         pax: userPax,
@@ -36,7 +36,7 @@ function BookNow (userName, userEmail, userPax,userRemarks){
     })
     .then((response) => response.json())
     .then(json => {
-      alert("ID:"+json.bookingItem.id +"," + json.bookingItem.name + "succesfully added!");
+      alert("ID:"+json.bookingitem.id +"," + json.bookingitem.name + "succesfully added!");
     });
 
 
