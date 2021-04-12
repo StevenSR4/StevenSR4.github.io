@@ -32,11 +32,11 @@ function BookNow (userName, userEmail, userPax,userRemarks){
       headers:{
           "Content-Type": "application/json"
       }
-      
+
     })
     .then((response) => response.json())
     .then(json => {
-      alert(json.bookingItem.name + "succesfully added!");
+      alert("ID:"+json.bookingItem.id +"," + json.bookingItem.name + "succesfully added!");
     });
 
 
