@@ -1,6 +1,6 @@
 let refreshNowBtn= document.getElementById("refreshNow");
 refreshNowBtn.addEventListener("click",function(){
-alert("GetBooking");
+GetBooking();
 });
 
 
@@ -9,6 +9,7 @@ function GetBooking(){
 fetch(url)
 .then((response) => response.json())
 .then(json => {
+
     let bookingNameList=document.getElementById("bookingNameList");
 
     // clear the table rows
@@ -20,7 +21,7 @@ fetch(url)
         let gName =json.bookingitems[i].name;
         let gEmail= json.bookingitems[i].email;
         let gPax= json.bookingitems[i].gpax;
-        let gRemarks= json.bookingitems[i].email;
+        let gRemarks= json.bookingitems[i].remarks;
         let gId= json.bookingitems[i].id;
 
         let row = bookingNameList.insertRow(bookingNameList.rows.length);
@@ -29,7 +30,7 @@ fetch(url)
         row.insertCell(2).innerHTML=gEmail;
         row.insertCell(3).innerHTML=gPax;
         row.insertCell(4).innerHTML= gRemarks;
-        row.insertCell(5).innerHTML="<button id='" + gId +"' Class='btn btn-danger'>Delete</button>";
+        row.insertCell(5).innerHTML="<button id='" + gId +"' Class='btn btn-danger'> Delete </button>";
         
     }
  
