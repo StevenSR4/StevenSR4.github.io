@@ -1,7 +1,7 @@
 let bookNowBtn = document.getElementById("bookNow");
 bookNowBtn.addEventListener("click", function(){
     let userName = document.getElementById("userName");
-    let userNameVal = userName.Value;
+    let userNameVal = userName.value;
 
     let userEmail= document.getElementById("userEmail");
     let userEmailVal = userEmail.value;
