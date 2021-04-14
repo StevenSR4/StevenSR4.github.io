@@ -23,6 +23,7 @@ fetch(url)
         let gPax= json.bookingitems[i].gpax;
         let gRemarks= json.bookingitems[i].remarks;
         let gId= json.bookingitems[i].id;
+        let btnId = "delete" + gId;
 
         let row = bookingNameList.insertRow(bookingNameList.rows.length);
         row.insertCell(0).innerHTML=gId;
@@ -30,7 +31,7 @@ fetch(url)
         row.insertCell(2).innerHTML=gEmail;
         row.insertCell(3).innerHTML=gPax;
         row.insertCell(4).innerHTML= gRemarks;
-        row.insertCell(5).innerHTML="<button id='" + gId +"' Class='btn btn-danger'> Delete </button>";
+        row.insertCell(5).innerHTML="<button id='" + btnId +"' Class='btn btn-danger'> Delete </button>";
         
     }
  
