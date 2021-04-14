@@ -53,7 +53,7 @@ function GetBooking() {
 }
 
 function DeleteBooking(id) {
-    let url = 'https://api.sheety.co/9192796fbfeb32fc266d9e164e704c37/tableapp/bookingitems/' = id;
+    let url = 'https://api.sheety.co/9192796fbfeb32fc266d9e164e704c37/tableapp/bookingitems/' + id;
     fetch(url, {
         method: 'DELETE',
     })
