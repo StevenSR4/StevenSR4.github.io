@@ -17,13 +17,13 @@ function GetBooking() {
 
             // clear the table rows
             for (let k = bookingNameList.rows.length - 1; k > 0; k--) {
-                bookingNameList.deleteRows(k);
+                bookingNameList.deleteRow(k);
             }
 
             for (let i = 0; i < json.bookingitems.length; i++) {
                 let gName = json.bookingitems[i].name;
                 let gEmail = json.bookingitems[i].email;
-                let gPax = json.bookingitems[i].gpax;
+                let gPax = json.bookingitems[i].pax;
                 let gRemarks = json.bookingitems[i].remarks;
                 let gId = json.bookingitems[i].id;
                 let btnId = "delete" + gId;
@@ -43,7 +43,7 @@ function GetBooking() {
             for (let j = 0; j < bookingIds.length; j++) {
                 let el = document.getElementById(bookingIds[j]);
                 el.addEventListener("click", function () {
-                    let theId = booking[j].replace("delete", "");
+                    let theId = bookingIds[j].replace("delete", "");
 
                     DeleteBooking(theId);
                 });
