@@ -25,7 +25,6 @@ function GetBooking() {
                 let gEmail = json.bookingitems[i].email;
                 let gTraining = json.bookingitems[i].training;
                 let gLevel = json.bookingitems[i].level;
-                
                 let gTime = json.bookingitems[i].time;
                 let gRemarks = json.bookingitems[i].remarks;
                 let gId = json.bookingitems[i].id;
