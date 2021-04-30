@@ -19,7 +19,7 @@ function BookNow (userName, userEmail, userTraining,userTime,userRemarks){
         name: userName,
         email: userEmail,
         training: userTraining,
-        time:userTime,
+        time: userTime,
         remarks: userRemarks
     }
   }
