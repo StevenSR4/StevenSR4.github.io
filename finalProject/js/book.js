@@ -4,15 +4,16 @@ bookNowBtn.addEventListener("click", function(){
     let userNameVal = document.getElementById("userName").value;
     let userEmailVal= document.getElementById("userEmail").value;
     let userTrainingVal=document.getElementById ("userTraining").value;
-    let userTimeVal=document.getElementById ("userTime").value;
     let userLevelVal=document.getElementById ("userLevel").value;
+    let userTimeVal=document.getElementById ("userTime").value;
+    
     let userRemarksVal = document.getElementById("userRemarks").value;
 
     BookNow (userNameVal, userEmailVal, userTrainingVal, userLevelVal, userTimeVal,userRemarksVal);
 
 });
 
-function BookNow (userName, userEmail, userTraining,userTime,userRemarks){
+function BookNow (userName, userEmail, userTraining, userLevel, userTime,userRemarks){
     
     let url = 'https://api.sheety.co/9192796fbfeb32fc266d9e164e704c37/finalproject/bookingitems';
     let body = {
