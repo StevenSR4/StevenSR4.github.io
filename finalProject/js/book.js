@@ -5,9 +5,10 @@ bookNowBtn.addEventListener("click", function(){
     let userEmailVal= document.getElementById("userEmail").value;
     let userTrainingVal=document.getElementById ("userTraining").value;
     let userTimeVal=document.getElementById ("userTime").value;
+    let userLevelVal=document.getElementById ("userLevel").value;
     let userRemarksVal = document.getElementById("userRemarks").value;
 
-    BookNow (userNameVal, userEmailVal, userTrainingVal, userTimeVal,userRemarksVal);
+    BookNow (userNameVal, userEmailVal, userTrainingVal, userLevelVal, userTimeVal,userRemarksVal);
 
 });
 
@@ -19,6 +20,7 @@ function BookNow (userName, userEmail, userTraining,userTime,userRemarks){
         name: userName,
         email: userEmail,
         training: userTraining,
+        level: userLevel,
         time: userTime,
         remarks: userRemarks
     }

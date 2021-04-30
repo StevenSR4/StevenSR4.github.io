@@ -24,6 +24,8 @@ function GetBooking() {
                 let gName = json.bookingitems[i].name;
                 let gEmail = json.bookingitems[i].email;
                 let gTraining = json.bookingitems[i].training;
+                let gLevel = json.bookingitems[i].level;
+                
                 let gTime = json.bookingitems[i].time;
                 let gRemarks = json.bookingitems[i].remarks;
                 let gId = json.bookingitems[i].id;
@@ -34,9 +36,10 @@ function GetBooking() {
                 row.insertCell(1).innerHTML = gName;
                 row.insertCell(2).innerHTML = gEmail;
                 row.insertCell(3).innerHTML = gTraining;
-                row.insertCell(4).innerHTML = gTime;
-                row.insertCell(5).innerHTML = gRemarks;
-                row.insertCell(6).innerHTML = "<button id='" + btnId + "' Class='btn btn-danger'> Delete </button>";
+                row.insertCell(4).innerHTML = gLevel;
+                row.insertCell(5).innerHTML = gTime;
+                row.insertCell(6).innerHTML = gRemarks;
+                row.insertCell(7).innerHTML = "<button id='" + btnId + "' Class='btn btn-danger'> Delete </button>";
 
 
                 bookingIds.push(btnId);
