@@ -15,7 +15,6 @@
             <div class= "col">
               <a href="index.html" id="homebtn"><img src="https://i.imgur.com/uWJgzFp.png" alt="Logo" /></a>
 
-    <div id= "container-fluid">
         <div class= "row">
             <div class= "col">
                 
@@ -65,11 +64,11 @@
                         </div>
                         <div class="form-group">
                             <label for="userEmail">Email</label>
-                            <input type="text" class="form-control" id="userEmail" >
+                            <input type="text" class="form-control" id="userEmail" placeholder="name@example.com" >
                           </div>
                         <div class="form-group">
                           <label for="userTraining">Training</label>
-                          <select class="form-control" id="userTraining">
+                          <select class="form-control" id="userTraining" aria-placeholder="Select Training">
                             <option>Cardio Training</option>
                             <option>Calisthenics Training</option>
                             <option>Functional Training </option>
@@ -77,9 +76,14 @@
                             <option>Personal Training</option>
                           </select>
                         </div>
+
                         <div class="form-group">
-                            <label for="userPreferabletime">Preferable Time</label>
-                            <input type="text" class="form-control" id="userPreferabletime" >
+                            <label for="userPreferabletime">Training</label>
+                            <select class="form-control" id="userPreferabletime" placeholder="Select Timing">
+                              <option>8am - 10am</option>
+                              <option>5pm - 7pm </option>
+                              <option>8pm - 10pm</option>
+                            </select>
                           </div>
                         
                         <div class="form-group">

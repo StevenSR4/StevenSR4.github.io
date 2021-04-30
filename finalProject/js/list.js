@@ -23,7 +23,8 @@ function GetBooking() {
             for (let i = 0; i < json.bookingitems.length; i++) {
                 let gName = json.bookingitems[i].name;
                 let gEmail = json.bookingitems[i].email;
-                let gPax = json.bookingitems[i].pax;
+                let gTraining = json.bookingitems[i].training;
+                let gpreferabletime = json.bookingitems[i].preferabletime;
                 let gRemarks = json.bookingitems[i].remarks;
                 let gId = json.bookingitems[i].id;
                 let btnId = "delete" + gId;
@@ -32,7 +33,8 @@ function GetBooking() {
                 row.insertCell(0).innerHTML = gId;
                 row.insertCell(1).innerHTML = gName;
                 row.insertCell(2).innerHTML = gEmail;
-                row.insertCell(3).innerHTML = gPax;
+                row.insertCell(3).innerHTML = gTraining;
+                row.insertCell(3).innerHTML = gpreferabletime;
                 row.insertCell(4).innerHTML = gRemarks;
                 row.insertCell(5).innerHTML = "<button id='" + btnId + "' Class='btn btn-danger'> Delete </button>";
 
