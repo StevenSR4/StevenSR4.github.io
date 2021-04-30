@@ -34,9 +34,9 @@ function GetBooking() {
                 row.insertCell(1).innerHTML = gName;
                 row.insertCell(2).innerHTML = gEmail;
                 row.insertCell(3).innerHTML = gTraining;
-                row.insertCell(3).innerHTML = gpreferabletime;
-                row.insertCell(4).innerHTML = gRemarks;
-                row.insertCell(5).innerHTML = "<button id='" + btnId + "' Class='btn btn-danger'> Delete </button>";
+                row.insertCell(4).innerHTML = gPreferabletime;
+                row.insertCell(5).innerHTML = gRemarks;
+                row.insertCell(6).innerHTML = "<button id='" + btnId + "' Class='btn btn-danger'> Delete </button>";
 
 
                 bookingIds.push(btnId);
