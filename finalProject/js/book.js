@@ -3,12 +3,12 @@ bookNowBtn.addEventListener("click", function(){
     let userName = document.getElementById("userName");
     let userNameVal = userName.value;
 
-    let userEmail= document.getElementById("userEmail").value;
+    let userEmailVal= document.getElementById("userEmail").value;
     let userTrainingVal=document.getElementById ("userTraining").value;
     let userPreferabletimeVal=document.getElementById ("userPreferabletime").value;
     let userRemarksVal = document.getElementById("userRemarks").value;
 
-    BookNow (userNameVal, userEmailVal, userTrainingVal, userPreferabletime,userRemarksVal);
+    BookNow (userNameVal, userEmailVal, userTrainingVal, userPreferabletimeVal,userRemarksVal);
 
 });
 
